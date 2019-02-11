@@ -1,0 +1,34 @@
+  <div class="panel panel-primary">
+    <!-- <div class="panel-heading">
+    <h3 class="panel-title">{{employee.name}}</h3>
+  </div> -->
+    <div class="panel-body">
+      <div class="col-xs-10">
+        <div class="row vertical-align">
+
+          <div class="col-xs-4">
+            <img class="imageClass" [src]="movieDataItem.Poster" />
+          </div>
+          <div class="col-xs-8">
+
+            <div class="row">
+              <div class="col-xs-6">
+                <!-- Title : {{movieDataItem.Title}}  <button (click)="GetMovieId(movieDataItem.imdbID)"> Go to Details</button> -->
+                <a [routerLink]="" (click)="GetMovieId(movieDataItem.imdbID)"> {{movieDataItem.Title}} </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                Type : {{movieDataItem.Type}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                Year : {{movieDataItem.Year}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

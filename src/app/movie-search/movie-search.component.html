@@ -1,0 +1,41 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">MOVIE LIBRARY</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li>
+                <a [routerLink]="" (click)="ClickedHome()">Home</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a>
+                    <span> Hello {{userName}}</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="sidenav">
+        <a (click)="onWatchedMovies()">Movie watched ({{countWatched}})</a>
+        <br>
+        <a (click)="onToBeWatchedMovies()">Movie to be watched ({{countToBeWatched}})</a>
+    </div>
+    <div class="main">
+        <app-search-feature></app-search-feature>
+            <!-- <div *ngFor="let itemList of globalVariable.movieData">
+                <app-search-result [movieDataItem]="itemList" (notify)='getMovieDetailsForMovieID($event)'></app-search-result>
+            </div>
+            <div *ngIf="globalVariable.movieDetails">
+                <app-single-movie [movieDataResult]="globalVariable.movieDetails"></app-single-movie>
+            </div> -->
+    </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->

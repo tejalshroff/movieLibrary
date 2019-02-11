@@ -1,0 +1,46 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-size: 20px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    z-index: 1;
+    top: 65px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 100px;
+    position:fixed;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    padding: 0px 10px
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 60px;}
+  .sidenav a {font-size: 18px;}
+}
+

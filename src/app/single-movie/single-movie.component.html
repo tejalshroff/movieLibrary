@@ -1,0 +1,55 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Tilte : {{movieDataResult.Title}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="col-xs-10">
+
+      <div class="row vertical-align">        
+        <div class="col-xs-4">
+          <img class="imageClass" [src]="movieDataResult.Poster" />
+        </div>
+        <div class="col-xs-8">
+          <div class="row">
+            <div class="col-xs-6">
+              Released : {{movieDataResult.Released}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              Year : {{movieDataResult.Year}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              Type : {{movieDataResult.Type}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              Language : {{movieDataResult.Language}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <p> Writer : {{movieDataResult.Writer}} </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <p> Actors : {{movieDataResult.Actors}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Description : {{movieDataResult.Plot}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button [disabled]="movieWatched" type="button" class="btn btn-primary" (click)="setMovieStatus(true)" >Movie Watched</button>
+  <button [disabled]="movieToBeWatched" type="button" class="btn btn-primary"(click)="setMovieStatus(false)" >Movie to be Watched</button>
+  <button [disabled]="removeMovie" type="button" class="btn btn-primary" (click)="OnDeleteMovie()">Remove from list</button>
+</div>

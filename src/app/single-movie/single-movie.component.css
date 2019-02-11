@@ -1,0 +1,22 @@
+.imageClass{
+    width:300px;
+    height:300px;
+}
+.vertical-align{
+    display: flex;
+    align-items: center;
+}
+
+.col-xs-8 {
+    margin-left: 70px;
+}
+
+.btn-primary{
+vertical-align: 30px;
+margin-left: 80px;
+
+}
+
+p{
+width: 620px;
+}

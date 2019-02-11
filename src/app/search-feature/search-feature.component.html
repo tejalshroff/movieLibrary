@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" placeholder="Search..." name="search" [(ngModel)]="this.globalVariable.searchValue" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button" (click)="OnSearch()">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="ex1">
+        <div *ngFor="let itemList of globalVariable.movieData">
+            <app-search-result [movieDataItem]="itemList" (notify)='getMovieDetailsForMovieID($event)'></app-search-result>
+        </div>
+
+        <div *ngIf="globalVariable.movieDetails">
+            <app-single-movie [movieDataResult]="globalVariable.movieDetails"></app-single-movie>
+        </div>
+    </div>
+</div>
